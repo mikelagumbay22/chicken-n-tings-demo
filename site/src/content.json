@@ -1,0 +1,365 @@
+{
+  "_readme": "ALL business content for the Chicken \"N\" Tings demo (Business package sample). Facts ONLY from Chiefy's brief: address, phone, 4.0 on Google from 416 reviews. No hours, prices, staff names, owner names, review quotes or e-mail.",
+  "meta": {
+    "lang": "en-CA",
+    "noindex": true,
+    "show_placeholder_badges": true,
+    "schema_include_rating": false,
+    "schema_image": "schema_logo",
+    "demo_banner": "Business package demo concept — not an official website of Chicken \"N\" Tings, and not affiliated with or approved by the business.",
+    "copyright_line": "Demo concept, not affiliated with or approved by Chicken \"N\" Tings.",
+    "image_badge": "Illustrative image, not a photo of the restaurant's food",
+    "_image_badge_note": "Four AI images made with Higgsfield (GPT Image 2.5, Oct 10, 2026). Never call them 'stock'.",
+    "theme_color": "#17110D",
+    "site_url": "https://mikelagumbay22.github.io/chicken-n-tings-demo/",
+    "share": {
+      "suffix": "(demo concept)",
+      "site_name_template": "{name} {suffix}",
+      "description_template": "Demo concept website for {name}, {summary} — not the official site. {page_summary}",
+      "summary": "a Jamaican restaurant in Malton, Mississauga",
+      "max_description": 160,
+      "title_suffix_in_tab": true
+    },
+    "social_image": {
+      "source_image": "jerk",
+      "output": "og-image.jpg",
+      "width": 1200,
+      "height": 630,
+      "alt": "A plate of jerk chicken with rice and peas and fried plantain (illustrative image, not a photo of the restaurant's food)",
+      "label": "Demo concept, not the official site",
+      "label_bg": "#17110D",
+      "label_fg": "#F6B93B",
+      "label_size": 52,
+      "label_band_height": 112,
+      "badge_size": 28,
+      "business_type": "restaurant",
+      "badge": "Illustrative image, not a photo of the restaurant's food",
+      "font": "../work/fonts/mulish-700-latin.ttf",
+      "quality": 68
+    },
+    "image_max_kb": 150
+  },
+  "export": {
+    "banned_words": [
+      "Quill",
+      "Canvas",
+      "Chiefy",
+      "Launch",
+      "Pixel",
+      "Grok",
+      "hotmail",
+      "gmail",
+      "Higgsfield"
+    ],
+    "banned_patterns": [
+      "mailto",
+      "[\\w.+-]+@[\\w-]+\\.[a-z]{2,}",
+      "aggregateRating",
+      "\\bstock (image|photo|photograph|footage|picture)",
+      "priceRange",
+      "paymentAccepted",
+      "\"review\"",
+      "\"email\"",
+      "\\$\\s?\\d",
+      "github\\.io(?![^<]*(\"|'))",
+      "since (19|20)\\d\\d",
+      "award",
+      "best in ",
+      "authentic(?:ally)? since",
+      "voted",
+      "#1 (in|rated|best)\\b",
+      "family[- ]owned",
+      "\\bchef\\b",
+      "halal",
+      "open (now|today|daily|7 days)",
+      "\\bfree\\b"
+    ],
+    "never_publish": [],
+    "never_publish_globs": [],
+    "never_publish_dirs": [],
+    "required_text": [
+      "@demo_banner",
+      "Demo concept, not affiliated with or approved by Chicken \"N\" Tings."
+    ],
+    "placeholder_banned_words": [
+      "builder",
+      "JSON",
+      "Chiefy",
+      "owner"
+    ],
+    "schema_forbidden_keys": [
+      "aggregateRating",
+      "review",
+      "email",
+      "url",
+      "priceRange",
+      "paymentAccepted",
+      "currenciesAccepted",
+      "makesOffer",
+      "amenityFeature",
+      "openingHoursSpecification"
+    ]
+  },
+  "business": {
+    "name": "Chicken \"N\" Tings",
+    "short_name": "Chicken N Tings",
+    "schema_type": [
+      "Restaurant"
+    ],
+    "cuisine": "Jamaican",
+    "phone_display": "(905) 677-9888",
+    "phone_e164": "+19056779888",
+    "phone_schema": "+1-905-677-9888",
+    "address": {
+      "street": "4025 Brandon Gate Dr",
+      "unit": "",
+      "city": "Mississauga",
+      "region": "ON",
+      "postal_code": "L4T 3R2",
+      "country": "CA",
+      "full": "4025 Brandon Gate Dr, Mississauga, ON L4T 3R2"
+    },
+    "map_query": "Chicken N Tings, 4025 Brandon Gate Dr, Mississauga, ON L4T 3R2",
+    "reviews_url": "https://www.google.com/maps/search/?api=1&query=Chicken+N+Tings+4025+Brandon+Gate+Dr+Mississauga+ON",
+    "rating": "4.0",
+    "review_count": "416"
+  },
+  "brand_files": {
+    "logo": "logo.svg",
+    "favicon": "favicon.ico",
+    "favicon_png": "favicon-512.png",
+    "apple_touch_icon": "apple-touch-icon.png",
+    "schema_logo": "logo.png",
+    "_note": "Demo wordmark made for this concept (work/logo.py). Not the business's logo."
+  },
+  "pages": [
+    {
+      "id": "home",
+      "file": "index.html",
+      "template": "home.html.j2",
+      "nav_label": "Home",
+      "title": "Chicken \"N\" Tings | Jamaican Restaurant in Malton, Mississauga",
+      "share_description": "Demo concept site: Jamaican food at 4025 Brandon Gate Dr in Malton, Mississauga. Jerk chicken, oxtail, curry goat and patties. Not the official site."
+    },
+    {
+      "id": "menu",
+      "file": "menu.html",
+      "template": "menu.html.j2",
+      "nav_label": "Menu",
+      "title": "Sample Jamaican Menu | Chicken \"N\" Tings, Malton",
+      "share_description": "Demo concept site: a sample Jamaican menu (prices to confirm) for Chicken \"N\" Tings on Brandon Gate Dr, Malton, Mississauga."
+    },
+    {
+      "id": "order",
+      "file": "order-catering.html",
+      "template": "order.html.j2",
+      "nav_label": "Order & catering",
+      "title": "Order & Jamaican Catering in Mississauga | Chicken \"N\" Tings",
+      "share_description": "Demo concept site: call to order pickup, or ask about Jamaican catering in Malton and Mississauga. Chicken \"N\" Tings, Brandon Gate Dr."
+    },
+    {
+      "id": "reviews",
+      "file": "reviews.html",
+      "template": "reviews.html.j2",
+      "nav_label": "Reviews",
+      "title": "Reviews | Chicken \"N\" Tings, Brandon Gate, Mississauga",
+      "share_description": "Demo concept site: Chicken \"N\" Tings is rated 4.0 on Google from 416 reviews. Jamaican restaurant in Malton, Mississauga."
+    },
+    {
+      "id": "visit",
+      "file": "visit.html",
+      "template": "visit.html.j2",
+      "nav_label": "Visit",
+      "title": "Visit Us: 4025 Brandon Gate Dr, Malton | Chicken \"N\" Tings",
+      "share_description": "Demo concept site: find Chicken \"N\" Tings at 4025 Brandon Gate Dr, Mississauga, ON L4T 3R2. Map, directions and phone (905) 677-9888."
+    },
+    {
+      "id": "notfound",
+      "file": "404.html",
+      "template": "404.html.j2",
+      "title": "Page not found | Chicken \"N\" Tings",
+      "share_summary": "Page not found."
+    }
+  ],
+  "header_cta": {
+    "label": "Call to order",
+    "href": "tel:+19056779888",
+    "icon": "phone"
+  },
+  "hours": [
+    {
+      "day": "Monday",
+      "tbc": true,
+      "display": "To confirm"
+    },
+    {
+      "day": "Tuesday",
+      "tbc": true,
+      "display": "To confirm"
+    },
+    {
+      "day": "Wednesday",
+      "tbc": true,
+      "display": "To confirm"
+    },
+    {
+      "day": "Thursday",
+      "tbc": true,
+      "display": "To confirm"
+    },
+    {
+      "day": "Friday",
+      "tbc": true,
+      "display": "To confirm"
+    },
+    {
+      "day": "Saturday",
+      "tbc": true,
+      "display": "To confirm"
+    },
+    {
+      "day": "Sunday",
+      "tbc": true,
+      "display": "To confirm"
+    }
+  ],
+  "hours_note": "[PLACEHOLDER: opening hours]",
+  "images": {
+    "jerk": {
+      "file": "jerk.jpg",
+      "illustrative": true,
+      "focus": "50% 55%",
+      "alt": "Jerk chicken with grill marks, rice and peas and fried plantain on a plate"
+    },
+    "oxtail": {
+      "file": "oxtail.jpg",
+      "illustrative": true,
+      "focus": "50% 50%",
+      "alt": "Oxtail with butter beans, rice and peas and steamed cabbage in a bowl"
+    },
+    "patties": {
+      "file": "patties.jpg",
+      "illustrative": true,
+      "focus": "45% 60%",
+      "alt": "Golden Jamaican patties, one broken open, beside fried festival"
+    },
+    "catering": {
+      "file": "catering.jpg",
+      "illustrative": true,
+      "focus": "50% 50%",
+      "alt": "A catering spread of trays with jerk chicken, curry goat, rice and peas, plantain, festival and coleslaw"
+    }
+  },
+  "menu_note": "Sample menu for this demo, built from common Jamaican dishes. Not the restaurant's actual menu. Prices to confirm.",
+  "menu": [
+    {
+      "cat": "From the grill & the pot",
+      "items": [
+        {
+          "name": "Jerk chicken",
+          "desc": "Spiced, smoky and charred, with a jerk kick."
+        },
+        {
+          "name": "Oxtail",
+          "desc": "Slow-braised in rich brown gravy with butter beans."
+        },
+        {
+          "name": "Curry goat",
+          "desc": "Tender goat in Jamaican curry."
+        },
+        {
+          "name": "Brown stew chicken",
+          "desc": "Chicken stewed in a savoury brown sauce."
+        }
+      ]
+    },
+    {
+      "cat": "Sides",
+      "items": [
+        {
+          "name": "Rice and peas",
+          "desc": "Coconut rice cooked with kidney beans."
+        },
+        {
+          "name": "Fried plantain",
+          "desc": "Sweet and golden."
+        },
+        {
+          "name": "Steamed cabbage",
+          "desc": "Lightly seasoned vegetables."
+        },
+        {
+          "name": "Festival",
+          "desc": "Sweet fried dumplings."
+        }
+      ]
+    },
+    {
+      "cat": "Patties & snacks",
+      "items": [
+        {
+          "name": "Beef patty",
+          "desc": "Flaky golden pastry with a spiced filling."
+        },
+        {
+          "name": "Chicken patty",
+          "desc": "A milder patty option."
+        },
+        {
+          "name": "Coco bread",
+          "desc": "Soft bread, great with a patty."
+        }
+      ]
+    }
+  ],
+  "reviews": {
+    "rating": "4.0",
+    "count": "416",
+    "ph": "[PLACEHOLDER: reviews to confirm, quoted word for word with permission]",
+    "leave_label": "Leave us a Google review"
+  },
+  "catering_note": "[PLACEHOLDER: catering options, minimum order and lead time]",
+  "local_areas": [
+    "Malton",
+    "Brandon Gate",
+    "Westwood",
+    "Mississauga"
+  ],
+  "package": {
+    "label": "Demo only",
+    "heading": "What the Business package includes",
+    "intro": "This sample shows the extra features in the Business package. This panel is for the demo and would not appear on a live site.",
+    "domain_line": "Your own web address, e.g. chickenntings.ca or chickenntings.com",
+    "domain_note": "Example addresses only. Not registered or owned by the business.",
+    "features": [
+      {
+        "n": "1",
+        "text": "A custom warm, smoky design with an ember-and-grill-mark animation"
+      },
+      {
+        "n": "2",
+        "text": "Local-search pages for Malton, Brandon Gate and Mississauga"
+      },
+      {
+        "n": "3",
+        "text": "A menu page you can keep up to date"
+      },
+      {
+        "n": "4",
+        "text": "An order and catering inquiry form (disabled in this demo)"
+      },
+      {
+        "n": "5",
+        "text": "Google rating, review button, map and directions"
+      },
+      {
+        "n": "6",
+        "text": "Tap-to-call on every page"
+      },
+      {
+        "n": "7",
+        "text": "Your own web address, e.g. chickenntings.ca or chickenntings.com"
+      }
+    ]
+  }
+}

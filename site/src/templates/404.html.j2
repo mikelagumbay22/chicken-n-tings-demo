@@ -1,0 +1,17 @@
+{% extends "base.html.j2" %}
+{% from "partials/macros.html.j2" import icon, grill_marks with context %}
+{% block content %}
+<section class="section nf" aria-labelledby="nf-title">
+  <div class="container">
+    {{ grill_marks("grill--nf") }}
+    <p class="eyebrow">Page not found</p>
+    <h1 id="nf-title">This page went up in smoke</h1>
+    <p class="lead">We couldn't find that page. Try one of these instead.</p>
+    <div class="btn-row center">
+      <a class="btn btn--primary" href="{{ page_href.home }}">{{ icon("home") }}Home</a>
+      <a class="btn btn--ghost" href="{{ page_href.menu }}">{{ icon("menu") }}Menu</a>
+      <a class="btn btn--ghost" href="{{ page_href.visit }}">{{ icon("pin") }}Visit</a>
+    </div>
+  </div>
+</section>
+{% endblock %}

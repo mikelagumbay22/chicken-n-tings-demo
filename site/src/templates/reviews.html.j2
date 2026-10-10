@@ -1,0 +1,23 @@
+{% extends "base.html.j2" %}
+{% from "partials/macros.html.j2" import icon, review_button, rating_badge, contact_buttons with context %}
+{% block content %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container section-head">
+    <p class="eyebrow">Reviews</p>
+    <h1 id="page-title">What people say about us</h1>
+    {{ rating_badge() }}
+    <div class="btn-row">{{ review_button("btn--gold") }}</div>
+  </div>
+</section>
+<section class="section section--tight" aria-labelledby="rq-title">
+  <div class="container">
+    <h2 id="rq-title" class="visually-hidden">Customer reviews</h2>
+    <div class="review-ph reveal" data-tilt>
+      <p class="review-ph__q" aria-hidden="true">“…”</p>
+      <p>{{ c.reviews.ph | ph }}</p>
+      <p class="note">Real customer reviews will go here once the restaurant shares them. We don't make up reviews.</p>
+    </div>
+  </div>
+</section>
+<section class="section cta-band" aria-labelledby="rv-cta"><div class="container reveal"><h2 id="rv-cta">Been in? Tell people about it.</h2><div class="btn-row center">{{ review_button("btn--gold") }}</div></div></section>
+{% endblock %}

@@ -1,0 +1,70 @@
+{% extends "base.html.j2" %}
+{% from "partials/macros.html.j2" import icon, media, contact_buttons, review_button, rating_badge, embers, grill_marks, package_panel with context %}
+{% block content %}
+<section class="hero" aria-labelledby="hero-title">
+  {{ embers(16) }}
+  <div class="container hero__grid">
+    <div class="hero__copy">
+      <p class="eyebrow">Malton · Brandon Gate · Mississauga</p>
+      <h1 id="hero-title">Jamaican flavour, <span class="gold-text">fresh off the grill</span></h1>
+      <p class="lead">Jerk chicken, oxtail, curry goat, patties and more at 4025 Brandon Gate Dr in Malton. Call ahead for pickup, or ask us about catering.</p>
+      <div class="btn-row">
+        <a class="btn btn--primary btn--lg" href="tel:{{ b.phone_e164 }}">{{ icon("phone") }}Call {{ b.phone_display }}</a>
+        <a class="btn btn--ghost btn--lg" href="{{ page_href.menu }}">{{ icon("menu") }}See the menu</a>
+      </div>
+      {{ rating_badge() }}
+    </div>
+    <div class="hero__art">
+      <div class="plate-frame">
+        {{ media(c.images.jerk, "(min-width: 960px) 560px, 92vw", "media--wide", eager=true) }}
+        {{ grill_marks("grill--hero") }}
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="section" aria-labelledby="dish-title">
+  <div class="container">
+    <div class="section-head reveal"><p class="eyebrow">From our kitchen</p><h2 id="dish-title">Jamaican staples, done right</h2></div>
+    <ul class="dishes">
+      {%- for d in [("oxtail", "Oxtail with rice and peas", "Slow-braised and rich, with rice and peas on the side."), ("patties", "Patties and festival", "Flaky golden patties and sweet fried festival."), ("catering", "Catering trays", "Feeding a crowd in Malton or Mississauga? Ask us about catering.")] %}
+      <li class="dish reveal" data-tilt style="--d: {{ loop.index0 * 0.1 }}s">
+        {{ media(c.images[d[0]], "(min-width: 1040px) 360px, (min-width: 640px) 46vw, 92vw", "media--wide") }}
+        <div class="dish__body"><h3>{{ d[1] }}</h3><p>{{ d[2] }}</p></div>
+      </li>
+      {%- endfor %}
+    </ul>
+    <div class="btn-row center"><a class="btn btn--gold" href="{{ page_href.menu }}">{{ icon("menu") }}See the sample menu</a><a class="btn btn--ghost" href="{{ page_href.order }}">{{ icon("users") }}Order & catering</a></div>
+  </div>
+</section>
+
+<section class="section section--panel" aria-labelledby="rev-title">
+  <div class="container split">
+    <div class="reveal reveal-l">
+      <p class="eyebrow">Reviews</p>
+      <h2 id="rev-title"><span class="big-count" data-count="416">416</span> Google reviews</h2>
+      {{ rating_badge() }}
+      <p class="note">{{ c.reviews.ph | ph }}</p>
+      <div class="btn-row">{{ review_button() }}<a class="btn btn--ghost" href="{{ page_href.reviews }}">{{ icon("review") }}Reviews page</a></div>
+    </div>
+    <div class="reveal reveal-r visit-card">
+      <h2 class="h3">{{ icon("pin") }} Find us in Malton</h2>
+      <p class="addr">{{ b.address.street }}<br>{{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}</p>
+      <p>In the Brandon Gate area of Malton, Mississauga.</p>
+      <p><strong>Hours:</strong> {{ c.hours_note | ph }}</p>
+      {{ contact_buttons() }}
+    </div>
+  </div>
+</section>
+
+<section class="section cta-band" aria-labelledby="cta-title">
+  {{ embers(10) }}
+  <div class="container reveal">
+    <h2 id="cta-title">Hungry? Call ahead.</h2>
+    <p>Call us to order for pickup, or to ask about catering.</p>
+    {{ contact_buttons("center") }}
+  </div>
+</section>
+
+{{ package_panel() }}
+{% endblock %}

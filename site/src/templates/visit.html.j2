@@ -1,0 +1,30 @@
+{% extends "base.html.j2" %}
+{% from "partials/macros.html.j2" import icon, contact_buttons, review_button, rating_badge with context %}
+{% block content %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container section-head">
+    <p class="eyebrow">Visit · Malton, Mississauga</p>
+    <h1 id="page-title">4025 Brandon Gate Dr</h1>
+    <p class="lead">Find us in the Brandon Gate area of Malton, Mississauga, ON L4T 3R2.</p>
+    {{ contact_buttons() }}
+  </div>
+</section>
+<section class="section section--tight" aria-label="Map and details">
+  <div class="container visit-grid">
+    <div class="map-frame reveal" id="map">
+      <iframe src="{{ map_embed_url }}" title="Google Map showing {{ b.name }} at {{ b.address.full }}" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe>
+    </div>
+    <div class="visit-card reveal" style="--d:.1s">
+      <h2 class="h3">{{ icon("pin") }} Address</h2>
+      <p class="addr">{{ b.address.street }}<br>{{ b.address.city }}, {{ b.address.region }} {{ b.address.postal_code }}</p>
+      <h2 class="h3">{{ icon("phone") }} Phone</h2>
+      <p><a href="tel:{{ b.phone_e164 }}">{{ b.phone_display }}</a></p>
+      <h2 class="h3">{{ icon("clock") }} Hours</h2>
+      <p>{{ c.hours_note | ph }}</p>
+      <h2 class="h3">{{ icon("star") }} Reviews</h2>
+      {{ rating_badge() }}
+      <div class="btn-row">{{ review_button() }}</div>
+    </div>
+  </div>
+</section>
+{% endblock %}

@@ -1,0 +1,36 @@
+{% extends "base.html.j2" %}
+{% from "partials/macros.html.j2" import icon, media, contact_buttons with context %}
+{% block content %}
+<section class="page-hero" aria-labelledby="page-title">
+  <div class="container section-head">
+    <p class="eyebrow">Menu · Malton, Mississauga</p>
+    <h1 id="page-title">Sample menu</h1>
+    <p class="lead">Jamaican favourites, from jerk chicken to oxtail and patties.</p>
+    <p class="menu-flag"><mark class="ph-inline">Sample menu, prices to confirm</mark></p>
+  </div>
+</section>
+<section class="section section--tight" aria-label="Menu items">
+  <div class="container menu-grid">
+    <div class="menu-list">
+      {%- for cat in c.menu %}
+      <div class="menu-cat reveal">
+        <h2>{{ cat.cat }}</h2>
+        <ul>
+          {%- for it in cat["items"] %}
+          <li class="menu-item"><span class="menu-item__name">{{ it.name }}</span><span class="menu-item__dots" aria-hidden="true"></span><span class="menu-item__price"><mark class="ph-inline">To confirm</mark></span><span class="menu-item__desc">{{ it.desc }}</span></li>
+          {%- endfor %}
+        </ul>
+      </div>
+      {%- endfor %}
+      <p class="note">{{ c.menu_note }}</p>
+    </div>
+    <div class="menu-side">
+      <div class="photo-frame reveal reveal-r">{{ media(c.images.oxtail, "(min-width: 900px) 420px, 92vw", "media--wide") }}</div>
+      <div class="photo-frame reveal reveal-r" style="--d:.1s">{{ media(c.images.patties, "(min-width: 900px) 420px, 92vw", "media--wide") }}</div>
+    </div>
+  </div>
+</section>
+<section class="section cta-band" aria-labelledby="menu-cta"><div class="container reveal">
+  <h2 id="menu-cta">Ready to order?</h2><p>Call ahead and we'll have it ready for pickup.</p>{{ contact_buttons("center") }}
+</div></section>
+{% endblock %}

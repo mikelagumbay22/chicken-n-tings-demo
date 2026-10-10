@@ -1,0 +1,21 @@
+/* THEME: Chicken "N" Tings demo. Warm Jamaican-inspired (ember, mango gold, callaloo green, smoky charcoal), not the flag.
+   Contrast: Text #FBF3E6 on #17110D 17.0 · Muted #DCCBB4 on #2A1E17 10.2 · Gold #F6B93B on #17110D 10.6 · Ember #F0714B on #17110D 6.4 · White on #B8321A 6.0 · Leaf #7FC48F 9.1. */
+@font-face { font-family: "Fraunces"; font-style: normal; font-weight: 600 700; font-display: swap; src: url("../fonts/fraunces-normal-latin.woff2") format("woff2"); }
+@font-face { font-family: "Fraunces Fallback"; font-weight: 100 900; src: local("Georgia Bold"), local("Georgia-Bold"), local("DejaVu Serif Bold"), local("Noto Serif Bold"), local("Liberation Serif Bold"); size-adjust: 98%; ascent-override: 96%; descent-override: 25%; line-gap-override: 0%; }
+@font-face { font-family: "Mulish"; font-style: normal; font-weight: 400; font-display: swap; src: url("../fonts/mulish-400-latin.woff2") format("woff2"); }
+@font-face { font-family: "Mulish"; font-style: normal; font-weight: 700; font-display: swap; src: url("../fonts/mulish-700-latin.woff2") format("woff2"); }
+@font-face { font-family: "Mulish Fallback"; font-weight: 100 499; src: local("Arial"), local("ArialMT"), local("Liberation Sans"), local("Arimo"); size-adjust: 102.8%; ascent-override: 97.8%; descent-override: 24.3%; line-gap-override: 0%; }
+@font-face { font-family: "Mulish Fallback"; font-weight: 500 649; src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("LiberationSans-Bold"), local("Arimo Bold"); size-adjust: 97.9%; ascent-override: 102.7%; descent-override: 25.5%; line-gap-override: 0%; }
+@font-face { font-family: "Mulish Fallback"; font-weight: 650 900; src: local("Arial Bold"), local("Arial-BoldMT"), local("Liberation Sans Bold"), local("LiberationSans-Bold"), local("Arimo Bold"); size-adjust: 99.7%; ascent-override: 100.8%; descent-override: 25.1%; line-gap-override: 0%; }
+@font-face { font-family: "Mulish Fallback Roboto"; font-weight: 100 499; src: local("Roboto"), local("Roboto-Regular"); size-adjust: 104.4%; ascent-override: 96.3%; descent-override: 24.0%; line-gap-override: 0%; }
+@font-face { font-family: "Mulish Fallback Roboto"; font-weight: 500 649; src: local("Roboto Medium"), local("Roboto-Medium"), local("Roboto Bold"), local("Roboto-Bold"); size-adjust: 104.7%; ascent-override: 96.0%; descent-override: 23.9%; line-gap-override: 0%; }
+@font-face { font-family: "Mulish Fallback Roboto"; font-weight: 650 900; src: local("Roboto Bold"), local("Roboto-Bold"); size-adjust: 106.3%; ascent-override: 94.6%; descent-override: 23.5%; line-gap-override: 0%; }
+:root {
+  --ok-black: #17110D; --ok-ink: #1F1611; --ok-surface: #2A1E17; --ok-surface-2: #35261D; --ok-line: #4A3628;
+  --ok-text: #FBF3E6; --ok-muted: #DCCBB4; --ok-yellow: #F6B93B; --ok-gold: #F6B93B; --ok-gold-lt: #FFD58A; --ok-gold-dk: #B5701F; --ok-brown: #4A3628;
+  --ok-red: #B8321A; --ok-red-hi: #F0714B; --ok-red-dk: #8F2512; --ok-coral: #F0714B; --ok-leaf: #7FC48F; --ok-leaf-dk: #2F6E45;
+  --font-display: "Fraunces", "Fraunces Fallback", Georgia, serif;
+  --font-body: "Mulish", "Mulish Fallback", "Mulish Fallback Roboto", system-ui, sans-serif;
+  --container: 74rem; --radius: 16px; --radius-lg: 24px;
+  --ease-out: cubic-bezier(.22, 1, .36, 1); --ease-spring: cubic-bezier(.34, 1.56, .64, 1);
+}
